@@ -31,14 +31,14 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class User implements UserDetails {
-    @Id
-    @SequenceGenerator(name = "usersIdSeq",
+    /*@SequenceGenerator(name = "usersIdSeq",
             sequenceName = "users_id_seq",
             allocationSize = 1
     )
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usersIdSeq")
-    private Long id;
+    private Long id;*/
 
+    @Id
     @Column(name = "email", unique = true)
     private String username;
 
